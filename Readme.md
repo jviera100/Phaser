@@ -119,7 +119,7 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 *Acknowledgments*
-<br><br>
+<br><br><hr><hr>
 The Phaser community for continuous support and tutorials.
 Open source assets from [Kenney.nl.](https://kenney.nl/)
 https://developers.facebook.com/docs/games/build/instant-games/
