@@ -1,4 +1,4 @@
-Phaser Game Project
+# Phaser Game Project
 Introduction
 Welcome to the Phaser Game Project! This project is built using Phaser, a fast and versatile framework for creating HTML5 games. Phaser is highly modular and allows developers to create rich and interactive experiences that can run in the browser.
 
@@ -34,22 +34,7 @@ Copiar código
 npm start
 Open your browser and navigate to http://localhost:8080 to view the game.
 
-Project Structure
-plaintext
-Copiar código
-phaser-game/
-│
-├── assets/               # Game assets (images, audio, etc.)
-├── src/                  # Source code
-│   ├── scenes/           # Different game scenes
-│   ├── main.js           # Main entry point for the game
-│   ├── player.js         # Player class and logic
-│   ├── utils.js          # Helper functions
-│
-├── index.html            # HTML file to render the game
-├── package.json          # Dependencies and project scripts
-├── README.md             # Project documentation
-└── webpack.config.js     # Webpack configuration for bundling
+
 How to Play
 Use the arrow keys to move your character.
 Press spacebar to interact with objects.
