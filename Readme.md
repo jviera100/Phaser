@@ -1,10 +1,12 @@
 # Phaser Game Project
 *Introduction*
+<br><br>
 Welcome to the Phaser Game Project! This project is built using Phaser, a fast and versatile framework for creating HTML5 games. Phaser is highly modular and allows developers to create rich and interactive experiences that can run in the browser.
 
 In this repository, you'll find the code and assets for our game, along with instructions on how to run, modify, and extend the project.
 
 *Features*
+<br><br>
 2D game engine: Uses Phaser's robust rendering capabilities for smooth performance.
 Physics engine: Leveraging Arcade Physics for collision detection and object interactions.
 Asset management: Built-in support for loading images, sounds, spritesheets, and other game assets.
@@ -16,6 +18,7 @@ To run this project locally, you'll need:
 Node.js (version 12 or higher)
 A basic understanding of JavaScript, HTML, and CSS
 *Installation*
+<br><br>
 Clone the repository to your local machine:
 
 bash
@@ -36,6 +39,7 @@ Open your browser and navigate to http://localhost:8080 to view the game.
 
 
 *How to Play*
+<br><br>
 Use the arrow keys to move your character.
 Press spacebar to interact with objects.
 Avoid obstacles and enemies to reach the goal.
@@ -115,6 +119,7 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 *Acknowledgments*
+<br><br>
 The Phaser community for continuous support and tutorials.
 Open source assets from [Kenney.nl.](https://kenney.nl/)
 https://developers.facebook.com/docs/games/build/instant-games/
