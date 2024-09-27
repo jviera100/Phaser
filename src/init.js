@@ -1,4 +1,4 @@
-const { Physics } = require("phaser");
+const { Physics, GameObjects } = require("phaser");
 
 // init.js
 const config = {
@@ -18,7 +18,7 @@ const config = {
         Physics:{
             default: 'arcade',
             arcade: {
-                gravity: {y: 500},
+                // gravity: {y: 500}, // se comento por reemplazo metodo rebote linea 97
                 debug: false
 
             }   
@@ -37,6 +37,7 @@ function preload (){
     this.load.image('particula','assets/particles/yellow.png');
     this.Load.image('raqueta', '../Assets/raqueta.png');
     this.load.image('sonido', '../Assets/audio.mp3');
+    this.load.audio('sonido', '../Assets/audio.mp3')
 };
 function create (){
     console.log(this.add.image(400, 300, "fondo"));
@@ -69,10 +70,45 @@ function create (){
         },
         align: 'center',
     });  
-    texto.alpha= 0.5; 
+    texto.alpha= 0.5;
+    raqueta = this.physics.add.image(400, 520, 'raqueta').setInteractive().setImmovable();
+    const eventos = Phaser.Input.Events;
+    console.log(eventos);
+    this.input.on('pointermove', function(pointer){
+        raqueta.x= pointer.x;
+    }) 
+    this.input.on(eventos.GAMEOBJECT_DOWN,(pointer, GameObject)=>{
+        gameObject.setTint(0x00ff00);        
+    })
+    const KeyCodes = Phaser.Input.Keyboard.KeyCodes;
+    console.log(KeyCodes);
+    teclaJ = this.input.Keyboard-addkey(KeyCodes);
+
+    // teclaJ.on('down', ()=>{
+    //     console.log('Soy la tecla J');
+    // }); 
+    const cursor = this.input.keyboard.createCursorKeys();
+    cursor.up.on('down',()=>{
+        Mundo.setScale(0.3);
+    });
+    cursor.down.on('down',()=>{
+        Mundo.setScale(1);
+    });
+    this.physics.add.collider(raqueta,Mundo,rebote,null,this);
+    function rebote(){ // se comento metodo gravedad linea 21
+        Mundo.setBounce(1);
+        efecto.play();
+    };
+    this.physics.worl.setBoundsCollision(true, true, true, false);
+    const efecto = this.sound.add('sonido');
 };
 function update(time, delta){
     Mundo.angle+= 5;
-
-
+    if (teclaJ.isDown){
+        console.log('la tecla J esta presionada');
+    }else if (teclaJ.isUp)
+        console.log('la tecla J no esta presionada')
 }; 
+
+
+
